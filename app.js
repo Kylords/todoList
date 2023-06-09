@@ -9,6 +9,8 @@ const app = express();
 
 const _ = require("lodash");
 
+const port = process.env.PORT || 3000
+
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -146,7 +148,7 @@ async function main() {
 }
 
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log("Server started on port 3000");
 });
 
